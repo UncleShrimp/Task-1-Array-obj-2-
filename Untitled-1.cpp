@@ -19,7 +19,7 @@ int randfill(int arr[20][20]) {
         for (int x=0; x<20; x++) {
             arr[y][x] = randomNum(1, 100);
             if (parity(arr[y][x])) {
-                //cout<<"True";
+                arr[y][x]*=2;
             }
         }
         cout<<""<<endl;
@@ -36,7 +36,6 @@ int printRand(int arr[20][20]) {
 
 int main() {
     int array2D[20][20];
-    printRand(array2D);
     randfill(array2D);
     cout<<""<<endl;
     printRand(array2D);
