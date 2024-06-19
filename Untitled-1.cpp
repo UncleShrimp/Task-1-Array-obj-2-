@@ -14,19 +14,30 @@ bool parity(int in) {
 int randomNum(int a, int b) {
     return a+rand()%b;
 }
-
-int main() {
-    int array2D[20][20];
-
+int randfill(int arr[20][20]) {
     for (int y=0; y<20; y++) {
         for (int x=0; x<20; x++) {
-            array2D[y][x] = randomNum(1, 100);
-            if (parity(array2D[y][x])) {
+            arr[y][x] = randomNum(1, 100);
+            if (parity(arr[y][x])) {
                 //cout<<"True";
-                array2D[y][x]*=2;
             }
-            cout<<array2D[y][x]<<" ";
         }
         cout<<""<<endl;
     }
+}
+int printRand(int arr[20][20]) {
+    for (int i=0; i<20; i++) {
+        for (int ii=0; ii<20; ii++) {
+            cout<<arr[i][ii]<<" ";
+        }
+        cout<<""<<endl;
+    }
+}
+
+int main() {
+    int array2D[20][20];
+    printRand(array2D);
+    randfill(array2D);
+    cout<<""<<endl;
+    printRand(array2D);
 }
