@@ -18,11 +18,17 @@ int randfill(int arr[20][20]) {
     for (int y=0; y<20; y++) {
         for (int x=0; x<20; x++) {
             arr[y][x] = randomNum(1, 100);
+        }
+        cout<<""<<endl;
+    }
+}
+int findRes(int arr[20][20]) {
+    for (int y=0; y<20; y++) {
+        for (int x=0; x<20; x++) {
             if (parity(arr[y][x])) {
                 arr[y][x]*=2;
             }
         }
-        cout<<""<<endl;
     }
 }
 int printRand(int arr[20][20]) {
@@ -37,6 +43,8 @@ int printRand(int arr[20][20]) {
 int main() {
     int array2D[20][20];
     randfill(array2D);
+    printRand(array2D);
     cout<<""<<endl;
+    findRes(array2D);
     printRand(array2D);
 }
