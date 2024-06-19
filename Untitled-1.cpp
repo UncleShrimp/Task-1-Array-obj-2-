@@ -18,9 +18,10 @@ int main() {
         for (int x=0; x<20; x++) {
             array2D[y][x] = 1+rand()%100;
             if (parity(array2D[y][x])) {
+                cout<<"True";
                 array2D[y][x]*=2;
             }
-            cout<<array2D[y][x];
+            cout<<array2D[y][x]<<" ";
         }
         cout<<""<<endl;
     }
